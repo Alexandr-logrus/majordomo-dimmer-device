@@ -1,9 +1,8 @@
 <?php
 
-if ($this->getProperty('level') == 0) {
- $this->setProperty('level', $this->getProperty('saved_level'));
- $this->setProperty('cct', $this->getProperty('saved_cct'));
-} else {
- $this->setProperty('level', $this->getProperty('level'));
+if ($this->getProperty('bright') == 0) {
  $this->setProperty('cct', $this->getProperty('cct'));
+ $this->setProperty('bright', $this->getProperty('saved_bright'));
+} else {
+ $this->setProperty('bright', $this->getProperty('bright'));
 }

@@ -1,14 +1,14 @@
 <script type="text/javascript">
-    var dimmer%.object_id%Level=%.level%;
+    var dimmer%.object_id%Level=%.bright%;
     var dimmer%.object_id%CCT=%.cct%;
     var dimmer%.object_id%Timer=0;
 
     function sendNewLevel%.object_id%() {
-        setGlobal("%.object_title%.level",dimmer%.object_id%Level);
+        setGlobal("%.object_title%.bright",dimmer%.object_id%Level);
     }
     function dimmerSetLevel%.object_id%(val) {
         dimmer%.object_id%Level=val;
-        $('#dimmer%.object_id%_level').html(dimmer%.object_id%Level);
+        $('#dimmer%.object_id%_bright').html(dimmer%.object_id%Level);
         sendNewLevel%.object_id%();
     }
     function dimmerChangeLevel%.object_id%(d) {
@@ -23,7 +23,7 @@
                 dimmer%.object_id%Level=0;
             }
         }
-        $('#dimmer%.object_id%_level').html(dimmer%.object_id%Level);
+        $('#dimmer%.object_id%_bright').html(dimmer%.object_id%Level);
         clearTimeout(dimmer%.object_id%Timer);
         dimmer%.object_id%Timer=setTimeout('sendNewLevel%.object_id%()',1000);
         return false;
@@ -60,7 +60,7 @@
  <div class="device-icon %.status|"off;on"%" id="icon%.object_id%_light" style='%.icon|"background-image:url(%.icon%)"%'></div>
  <div class="device-header">%.object_description%</div>
 </div>
-<div class="device-details"> <span id="dimmer%.object_id%_level">%.level%</span>%
+<div class="device-details"> <span id="dimmer%.object_id%_bright">%.bright%</span>%
     &nbsp;
     <!--#
     <a href="#" onclick="return dimmerChangeLevel%.object_id%('-');" style="font-weight:bold;text-decoration:none">[-]</a>
