@@ -1,3 +1,5 @@
 <?php
 
-$this->setProperty('status', 1);
+if ($this->getProperty('status') == 0) {
+ $this->setProperty('status', 1);
+}

@@ -1,8 +1,6 @@
 <?php 
 
-$currentStatus=$this->getProperty('status');
-
-if ($currentStatus) {
+if ($this->getProperty('status')) {
  $this->callMethod('turnOff');
 } else {
  $this->callMethod('turnOn');
