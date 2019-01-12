@@ -1,7 +1,7 @@
 <?php
 
 $this->device_types['dimmerph'] = array(
-    'TITLE'=>"Philips light",
+    'TITLE'=>'Philips light',
     'PARENT_CLASS'=>'SControllers',
     'CLASS'=>'SPhilipsDimmers',
     'PROPERTIES'=>array(
@@ -16,4 +16,8 @@ $this->device_types['dimmerph'] = array(
         'snmUpdated'=>array('DESCRIPTION'=>''),
         'turnOn'=>array('DESCRIPTION'=>'Dimmer turnOn'),
         'turnOff'=>array('DESCRIPTION'=>'Dimmer turnOff')
-    ));
+    )
+);
+
+@include_once(ROOT . 'languages/SPhilipsDimmers_' . SETTINGS_SITE_LANGUAGE . '.php');
+@include_once(ROOT . 'languages/SPhilipsDimmers_default' . '.php');
