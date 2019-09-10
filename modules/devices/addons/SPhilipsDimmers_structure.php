@@ -12,8 +12,8 @@ $this->device_types['dimmerph'] = array(
     ),
     'METHODS'=>array(
         'brightUpdated'=>array('DESCRIPTION'=>'Bright Updated'),
-        'cctUpdated'=>array('DESCRIPTION'=>'Bright Updated'),
-        'snmUpdated'=>array('DESCRIPTION'=>''),
+        'cctUpdated'=>array('DESCRIPTION'=>'cct Updated'),
+        'snmUpdated'=>array('DESCRIPTION'=>'snm Updated'),
         'turnOn'=>array('DESCRIPTION'=>'Dimmer turnOn'),
         'turnOff'=>array('DESCRIPTION'=>'Dimmer turnOff')
     )
