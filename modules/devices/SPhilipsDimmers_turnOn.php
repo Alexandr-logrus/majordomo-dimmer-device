@@ -1,5 +1,7 @@
 <?php
-
+if ($this->getProperty('status') == 0) {
+  $this->setProperty('status', 1);
+}
 if ($this->getProperty('saved_bright') == 0) {
   $this->setProperty('bright', 100);
 } else {
