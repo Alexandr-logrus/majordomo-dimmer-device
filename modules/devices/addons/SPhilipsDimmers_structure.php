@@ -1,5 +1,11 @@
 <?php
 
+if (SETTINGS_SITE_LANGUAGE && file_exists(ROOT . 'languages/SPhilipsDimmers_' . SETTINGS_SITE_LANGUAGE . '.php')) {
+ include_once(ROOT . 'languages/SPhilipsDimmers_' . SETTINGS_SITE_LANGUAGE . '.php');
+} else {
+ include_once(ROOT . 'languages/SPhilipsDimmers_default.php');//
+}
+
 $this->device_types['dimmerph'] = array(
     'TITLE'=>'Philips light',
     'PARENT_CLASS'=>'SControllers',
@@ -18,6 +24,3 @@ $this->device_types['dimmerph'] = array(
         'turnOff'=>array('DESCRIPTION'=>'Dimmer turnOff')
     )
 );
-
-@include_once(ROOT . 'languages/SPhilipsDimmers_' . SETTINGS_SITE_LANGUAGE . '.php');
-@include_once(ROOT . 'languages/SPhilipsDimmers_default' . '.php');
